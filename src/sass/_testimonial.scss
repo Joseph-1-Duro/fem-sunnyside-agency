@@ -1,0 +1,54 @@
+@use 'utils' as *;
+
+.testimonial {
+    text-align: center;
+    padding: 64px 20px;
+
+    @include atLargeScreen {
+        padding: 100px 40px;
+    }
+
+    .testimonial__heading {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-bottom: 5rem;
+        color: $dark-grayish-blue;
+    }
+
+    .client-grid {
+        width: 100%;
+        max-width: 1200px;
+        margin-inline: auto;
+        display: grid;
+        gap: 5rem;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+
+        @include atLargeScreen {
+            gap: 3rem;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 80px;
+            margin-bottom: 2rem;
+            aspect-ratio: 1 / 1;
+            margin-inline: auto;
+        }
+    
+        p {
+            color: $very-dark-grayish-blue;
+            max-width: 40ch;
+            margin: 0 auto 2rem;
+        }
+
+        h3 {
+            color: $very-dark-desaturated-blue;
+        }
+
+        small {
+            color: $dark-grayish-blue;
+            font-weight: 700;
+        }
+    }
+
+}

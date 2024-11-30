@@ -1,0 +1,28 @@
+@use 'utils' as *;
+
+.hero {
+    min-height: 100dvh;
+    background-image: url('../../images/mobile/image-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-content: center;
+    place-items: center;
+
+    @include atLargeScreen {
+        background-image: url('../../images/desktop/image-header.jpg');
+    }
+
+    h1 {
+        margin-bottom: 3rem;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: clamp(2.75rem, 2.662rem + 0.3756vw, 3rem);
+    }
+
+    img {
+        animation: pointDown 5s ease infinite forwards;
+    }
+}
